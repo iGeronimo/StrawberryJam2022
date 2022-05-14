@@ -44,7 +44,7 @@ public class movingPlatform : MonoBehaviour
 
     void changeDirection()
     {
-
+        Debug.Log("change direction");
         if(destination == boundary1)
         {
             destination = boundary2;
