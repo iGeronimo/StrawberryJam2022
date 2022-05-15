@@ -7,7 +7,9 @@ public class lavaCollision : MonoBehaviour
     public LayerMask lava;
     public Transform winCondition;
 
-
+    public bool touchingLava = false;
+    public Transform lavaCheck;
+    public float groundDistance = 0.4f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +20,19 @@ public class lavaCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        touchingLava = Physics.CheckSphere(lavaCheck.position, groundDistance, lava);
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("trigger");
-        if (other.gameObject.layer == lava)
+        if (touchingLava)
         {
-            Debug.Log("lava");
             winCondition.GetComponent<winCondition>().winnable = false;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(lavaCheck.position, groundDistance);
+    }
+
 
 
 }
