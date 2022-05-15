@@ -13,6 +13,7 @@ public class eggManager : MonoBehaviour
     public TextMeshProUGUI eggCountText;
 
     int totalEggs;
+    public bool eggQuestDone = false;
 
     private void Awake()
     {
@@ -39,6 +40,10 @@ public class eggManager : MonoBehaviour
             eggCount ++;
             eggCountText.text = "eggCount: "+ eggCount + "/" + totalEggs;
             oldChildCount = transform.childCount;
+            if (transform.childCount == 0)
+            {
+                eggQuestDone = true;
+            }
         }
     }
 }
