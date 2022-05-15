@@ -9,7 +9,9 @@ public class buttonManager : MonoBehaviour
 
     public void restartGame()
     {
+        Debug.Log("new scene pls :(");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-   
+
+    
 }

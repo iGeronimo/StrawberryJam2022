@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3873792202973760171}
   - component: {fileID: 6326800668838401583}
   m_Layer: 5
-  m_Name: Image
+  m_Name: indicatorNessie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8528632880287780367
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 907198904819552312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.27125, y: 1.27125, z: 1.27125}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

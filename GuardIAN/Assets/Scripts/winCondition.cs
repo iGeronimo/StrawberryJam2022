@@ -17,6 +17,7 @@ public class winCondition : MonoBehaviour
     public bool eggCon = false;
     public bool nessieCon = false;
     public bool winnable = true;
+    public bool won = false;
 
     public GameObject gameWonScreen;
     public GameObject gameOverScreen;
@@ -58,6 +59,7 @@ public class winCondition : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 nessieText.color = Color.green;
+                won = true;
             }else
             {
                 nessieCon = false;
@@ -81,7 +83,7 @@ public class winCondition : MonoBehaviour
 
     void timer()
     {
-        if (winnable)
+        if (winnable && !won)
         {
             currentTime -= Time.deltaTime;
             timerText.text = "time left: " + Mathf.RoundToInt(currentTime);
