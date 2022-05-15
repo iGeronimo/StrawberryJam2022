@@ -20,6 +20,7 @@ public class eggScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().PlaySound("EggPickup");
             Destroy(transform.gameObject);
         }
     }

@@ -24,6 +24,8 @@ public class winCondition : MonoBehaviour
 
     public GameObject nessieInidcator;
 
+    private bool oneTime = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,11 +68,13 @@ public class winCondition : MonoBehaviour
             }
             
         }
-        if(winnable == false)
+        if(winnable == false && oneTime)
         {
+            FindObjectOfType<AudioManager>().PlaySound("EggSizzle");
             gameOverScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            oneTime = false;
         }
     }
 
