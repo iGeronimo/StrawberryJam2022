@@ -13,5 +13,9 @@ public class buttonManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void backToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     
 }
